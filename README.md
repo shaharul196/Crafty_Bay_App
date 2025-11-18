@@ -19,6 +19,29 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
       <em>Email Verification</em>
     </td>
   </tr>
+
+  ## ✨ Features
+
+### 🔐 Authentication System
+- **User Registration** - Complete sign-up flow with form validation
+- **Secure Login** - Email/password authentication
+- **OTP Verification** - 4-digit PIN verification system
+
+
+### Crafty Bay E-commerce App
+- **Add To Cart** - Add new tasks with titles and descriptions
+- **Delete Item Cart** - Organized task dashboard with categorized views
+- **Cart Item Incre** - Organized task dashboard with categorized views
+- **Payment Gateway** - Edit task details and modify content
+- **Add Review** - Remove unwanted tasks with confirmation
+- **View Product** - Remove unwanted tasks with confirmation
+- **Status Management** - Track tasks through different states:
+    - 🆕 New
+    - ⏳ In Progress
+    - ✅ Completed
+    - ❌ Cancelled
+
+
   </table>
 
 
