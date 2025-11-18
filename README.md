@@ -6,9 +6,7 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 
 <table>
   <tr>
-    <td align="center"><strong>Authentication Flow</strong></td>
-    <td align="center"><strong>Task Management</strong></td>
-    <td align="center"><strong>Status Updates</strong></td>
+    
   </tr>
   </table>
 
