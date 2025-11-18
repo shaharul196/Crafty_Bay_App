@@ -1,0 +1,43 @@
+import 'package:e_commerce/app/set_up_network_client.dart';
+import 'package:get/get.dart';
+import '../features/auth/presentation/controller/sign_in_controller.dart';
+import '../features/auth/presentation/controller/sign_up_controller.dart';
+import '../features/auth/presentation/controller/verify_otp_controller.dart';
+import '../features/carts/presentation/controllers/cart_list_controller.dart';
+import '../features/home/presentation/controller/home_slider_controller.dart';
+import '../features/products/presentation/controllers/new_product_list_controller.dart';
+import '../features/products/presentation/controllers/popular_product_list_controller.dart';
+import '../features/products/presentation/controllers/product_details_controller.dart';
+import '../features/products/presentation/controllers/product_list_controller.dart';
+import '../features/products/presentation/controllers/special_product_list_controller.dart';
+import '../features/review/presentation/controllers/add_review_controller.dart';
+import '../features/review/presentation/controllers/review_list_controller.dart';
+import '../features/shared/presentation/controller/category_controller.dart';
+import '../features/shared/presentation/controller/main_nav_controller.dart';
+import '../features/wishlish/controllers/wish_list_controller.dart';
+import 'controllers/authentication_controller.dart';
+
+class ControllerBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.put(AuthenticationController());
+    Get.put(MainNavController());
+    Get.put(setUpNetworkClient());
+    Get.put(SignUpController());
+    Get.put(VerifyOtpController());
+    Get.put(SignInController());
+    Get.put(HomeSliderController());
+    Get.put(CategoryController());
+    Get.put(CartListController());
+    Get.put(WishListController());
+    Get.put(ProductListController());
+    Get.put(ProductDetailsController());
+    Get.put(AddReviewController());
+    Get.put(ReviewListController());
+    Get.put(NewProductListController());
+    Get.put(PopularProductListController());
+    Get.put(SpecialProductListController());
+
+  }
+
+}

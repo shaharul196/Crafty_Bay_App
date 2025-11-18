@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "40708660719",
+    "project_id": "fir-ecommerce-3b775",
+    "storage_bucket": "fir-ecommerce-3b775.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40708660719:android:b021c2da68758f6cc9aa1a",
+        "android_client_info": {
+          "package_name": "com.example.e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkaSQwSrVxswExVsObAxsxTUJHdw7AJSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

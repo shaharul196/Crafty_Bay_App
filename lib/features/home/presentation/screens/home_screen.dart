@@ -1,0 +1,244 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../app/assets_paths.dart';
+import '../../../products/presentation/controllers/new_product_list_controller.dart';
+import '../../../products/presentation/controllers/popular_product_list_controller.dart';
+import '../../../products/presentation/controllers/special_product_list_controller.dart';
+import '../../../shared/presentation/controller/category_controller.dart';
+import '../../../shared/presentation/controller/main_nav_controller.dart';
+import '../../../shared/presentation/widgets/centered_circular_progress.dart';
+import '../../../shared/presentation/widgets/product_card.dart';
+import '../../../shared/presentation/widgets/product_category_item.dart';
+import '../../widgets/app_bar_icon_button.dart';
+import '../../widgets/home_banner_slider.dart';
+import '../controller/home_slider_controller.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  // final ProductListController _productListController =
+  //     Get.find<ProductListController>();
+  final NewProductListController _newProductListController =
+      Get.find<NewProductListController>();
+  final PopularProductListController _popularProductListController =
+      Get.find<PopularProductListController>();
+  final SpecialProductListController _specialProductListController =
+      Get.find<SpecialProductListController>();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _newProductListController.getNewProductList();
+      _popularProductListController.getPopularProductList();
+      _specialProductListController.getSpecialProductList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: SvgPicture.asset(AssetsPaths.logoNavSvg),
+        actions: [
+          AppBarIconButton(onTap: () {}, iconData: Icons.person),
+          AppBarIconButton(onTap: () {}, iconData: Icons.call),
+          AppBarIconButton(
+            onTap: () {},
+            iconData: Icons.notifications_on_outlined,
+          ),
+        ],
+      ),
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              SizedBox(height: 16),
+              _buildSearchBar(),
+              SizedBox(height: 16),
+              GetBuilder<HomeSliderController>(
+                builder: (controller) {
+                  if (controller.getSlidersInProgress) {
+                    return SizedBox(
+                      height: 180,
+                      child: CenteredCircularProgress(),
+                    );
+                  }
+                  return HomeBannerSlider(sliders: controller.sliders);
+                },
+              ),
+              SizedBox(height: 16),
+              _buildSectionHeader(
+                title: 'All Categories',
+                onTapSeeAll: () {
+                  Get.find<MainNavController>().moveToCategory();
+                },
+              ),
+              _buildCategoryList(),
+              _buildSectionHeader(
+                title: 'New',
+                onTapSeeAll: () {
+                  Get.find<MainNavController>().moveToCategory();
+                },
+              ),
+              _buildNewProductList(),
+              _buildSectionHeader(
+                title: 'Special',
+                onTapSeeAll: () {
+                  Get.find<MainNavController>().moveToCategory();
+                },
+              ),
+              _buildSpecialProductList(),
+              _buildSectionHeader(
+                title: 'Popular',
+                onTapSeeAll: () {
+                  Get.find<MainNavController>().moveToCategory();
+                },
+              ),
+              _buildPopularProductList(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCategoryList() {
+    return SizedBox(
+      height: 100,
+      child: GetBuilder<CategoryController>(
+        builder: (controller) {
+          if (controller.isInitialLoading) {
+            return CenteredCircularProgress();
+          }
+          return ListView.separated(
+            itemCount:
+                controller.categoryList.length > 10
+                    ? 10
+                    : controller.categoryList.length,
+            primary: false,
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return ProductCategoryItem(
+                categoryModel: controller.categoryList[index],
+              );
+            },
+            separatorBuilder: (context, index) {
+              return SizedBox(width: 10);
+            },
+          );
+        },
+      ),
+    );
+  }
+
+  //TODO ata listView builder/separated diye korte parbo
+  Widget _buildNewProductList() {
+    return GetBuilder(
+      init: _newProductListController,
+      builder: (controller) {
+        if (controller.isInitialLoading) {
+          return CenteredCircularProgress();
+        }
+        if (controller.newProductList.isEmpty) {
+          return Center(child: Text('No new data found'));
+        }
+        return SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            // children: [1, 2, 3, 4, 5, 6].map((e) => ProductCard()).toList(),
+            children:
+                controller.newProductList
+                    .map((product) => ProductCard(productModel: product))
+                    .toList(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildPopularProductList() {
+    return GetBuilder(
+      init: _popularProductListController,
+      builder: (controller) {
+        if (controller.isInitialLoading) {
+          return CenteredCircularProgress();
+        }
+        if (controller.popularProductList.isEmpty) {
+          return Center(child: Text('No popular data found'));
+        }
+        return SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            // children: [1, 2, 3, 4, 5, 6].map((e) => ProductCard()).toList(),
+            children:
+                controller.popularProductList
+                    .map((product) => ProductCard(productModel: product))
+                    .toList(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildSpecialProductList() {
+    return GetBuilder(
+      init: _specialProductListController,
+      builder: (controller) {
+        if (controller.isInitialLoading) {
+          return CenteredCircularProgress();
+        }
+        if (controller.specialProductList.isEmpty) {
+          return Center(child: Text('No special data found'));
+        }
+        return SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children:
+                controller.specialProductList
+                    .map((product) => ProductCard(productModel: product))
+                    .toList(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildSectionHeader({
+    required String title,
+    required VoidCallback onTapSeeAll,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(title, style: Theme.of(context).textTheme.titleMedium),
+        TextButton(onPressed: onTapSeeAll, child: Text('See all')),
+      ],
+    );
+  }
+
+  Widget _buildSearchBar() {
+    return TextField(
+      onSubmitted: (String? text) {},
+      textInputAction: TextInputAction.search,
+      decoration: InputDecoration(
+        hintText: 'Search',
+        fillColor: Colors.grey.shade100,
+        filled: true,
+        prefixIcon: Icon(Icons.search),
+        enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
+        focusedBorder: OutlineInputBorder(borderSide: BorderSide.none),
+      ),
+    );
+  }
+}
