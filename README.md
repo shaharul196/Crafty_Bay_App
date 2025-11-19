@@ -36,13 +36,32 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 - **Payment Gateway** - This project uses the SSLcommerz payment system
 - **Localization Setup** - Basic localization setup
 - **Add Review** - You can give a review about the product.
-- **View Product** - You can visit the products and see the functionality.
+- **View Product** - Visit the products and see the functionality.
 - **Main Navigation Bar** - This project uses a different bottom navigation bar:
     - Home
     - Category
     - Cart
     - Wishlist
+ 
+### 🎨 User Experience
+- **Modern UI Design** - Clean and intuitive interface
+- **Responsive Layout** - Optimized for different screen sizes
+- **View Prodect** - Visit the products and see the functionality 
+- **User-friendly Navigation** - Smooth transitions and interactions
+- **Professional Styling** - Consistent color scheme and typography
 
+## 🛠️ Tech Stack
+
+| Technology            | Purpose                                 |
+|-----------------------|-----------------------------------------|
+| **Flutter**           | Cross-platform mobile app framework     |
+| **Dart**              | Primary programming language            |
+| **REST API**          | Backend communication and data handling |
+| **POST MAN**          | To Handel api calls                     |
+| **HTTP Package**      | API requests and responses              |
+| **SharedPreferences** | Local data storage                      |
+| **Form Validation**   | Input validation and error handling     |
+| **Localization**      | Basic localization setup                |
 
   
 
