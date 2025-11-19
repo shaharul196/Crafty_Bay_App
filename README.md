@@ -7,16 +7,58 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 <table>
   <tr>
     <td>
-      <img src="ScreenShots/S1.png" width="200" alt="Login Screen"/><br/>
+      <img src="screenshots/S1.png" width="220" alt="Login Screen"/><br/>
       <em>Login Screen</em>
     </td>
     <td>
-      <img src="ScreenShots/S2.png" width="200" alt="Sign Up Screen"/><br/>
+      <img src="screenshots/S2.png" width="220" alt="Sign Up Screen"/><br/>
       <em>Sign Up Screen</em>
     </td>
     <td>
-      <img src="ScreenShots/S3.png" width="200" alt="Email Verification"/><br/>
-      <em>Email Verification</em>
+      <img src="screenshots/S3.png" width="220" alt="OTP Verification"/><br/>
+      <em>OTP Verification</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/S4.png" width="220" alt="Splash Screen"/><br/>
+      <em>Splash Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S5.png" width="220" alt="Home Screen"/><br/>
+      <em>Home Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S6.png" width="220" alt="Category Screen"/><br/>
+      <em>Category Screen</em>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <img src="screenshots/S7.png" width="220" alt="Product Screen"/><br/>
+      <em>Product Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S8.png" width="220" alt="Product Details Screen"/><br/>
+      <em>Product Details Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S9.png" width="220" alt="Cart Screen"/><br/>
+      <em>Cart Screen</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/S11.png" width="220" alt="Payment Gateway Screen"/><br/>
+      <em>Payment Gateway Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S13.png" width="220" alt="Add Review Screen"/><br/>
+      <em>Add Review Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S12.png" width="220" alt="Review Screen"/><br/>
+      <em>Review Screen</em>
     </td>
   </tr>
   </table>
