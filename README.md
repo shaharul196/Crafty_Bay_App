@@ -33,6 +33,20 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
       <em>Category Screen</em>
     </td>
   </tr>
+   <tr>
+    <td>
+      <img src="screenshots/S7.png" width="220" alt="Product Screen"/><br/>
+      <em>Product Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S8.png" width="220" alt="Product Details Screen"/><br/>
+      <em>Product Details Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S9.png" width="220" alt="Cart Screen"/><br/>
+      <em>Cart Screen</em>
+    </td>
+  </tr>
   </table>
 
   ## ✨ Features
