@@ -7,7 +7,7 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 <table>
   <tr>
     <td>
-      <img src="screenshots/S1.png" width="250" alt="Login Screen"/><br/>
+      <img src="screenshots/S1.png" width="220" alt="Login Screen"/><br/>
       <em>Login Screen</em>
     </td>
     <td>
