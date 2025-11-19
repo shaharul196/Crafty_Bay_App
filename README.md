@@ -34,6 +34,7 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 - **Delete Item Cart** - Delete product from cart
 - **Cart Item Increment/Decrement** - Increment/decrement products from cart
 - **Payment Gateway** - This project uses the SSLcommerz payment system
+- **Localization Setup** - Basic localization setup
 - **Add Review** - You can give a review about the product.
 - **View Product** - You can visit the products and see the functionality.
 - **Main Navigation Bar** - This project uses a different bottom navigation bar:
