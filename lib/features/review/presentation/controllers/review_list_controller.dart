@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import '../../../../app/urls.dart';
 import '../../../../core/models/network_response.dart';
 import '../../../../core/services/network_caller.dart';
-import '../data/models/review_model.dart';
+import '../../data/models/review_model.dart';
 
 class ReviewListController extends GetxController {
   bool _getReviewInProgress = false;

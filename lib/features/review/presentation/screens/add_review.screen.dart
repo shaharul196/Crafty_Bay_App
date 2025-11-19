@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../../../shared/presentation/widgets/centered_circular_progress.dart';
 import '../../../shared/presentation/widgets/snackbar_message.dart';
+import '../../data/models/add_review_model.dart';
 import '../controllers/add_review_controller.dart';
-import '../data/models/add_review_model.dart';
 
 
 class AddReviewScreen extends StatefulWidget {
@@ -95,7 +95,6 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
 
   Future<void> _getAddReview() async {
     final model = AddReviewModel(
-      // productId: "679a06ad8ddf463f174f0df6",
       productId: "679a06ad8ddf463f174f0df6",
       comment: _descriptionController.text.trim(),
       rating: 4,
