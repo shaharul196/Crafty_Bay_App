@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../../../app/urls.dart';
 import '../../../../core/models/network_response.dart';
 import '../../../../core/services/network_caller.dart';
-import '../../data/cart_item_model.dart';
+import '../../data/models/cart_item_model.dart';
 
 
 class CartListController extends GetxController {

@@ -1,7 +1,6 @@
 import 'package:e_commerce/features/review/presentation/screens/review_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../shared/presentation/widgets/centered_circular_progress.dart';
 import '../../../shared/presentation/widgets/snackbar_message.dart';
 import '../../data/models/add_review_model.dart';

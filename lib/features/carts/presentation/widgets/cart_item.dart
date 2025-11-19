@@ -5,7 +5,7 @@ import '../../../../app/app_colors.dart';
 import '../../../../app/utils/constants.dart';
 import '../../../shared/presentation/widgets/increment_decrement_button.dart';
 import '../../../shared/presentation/widgets/snackbar_message.dart';
-import '../../data/cart_item_model.dart';
+import '../../data/models/cart_item_model.dart';
 import '../controllers/cart_list_controller.dart';
 
 class CartItem extends StatelessWidget {
