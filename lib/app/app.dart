@@ -35,6 +35,7 @@ class _CraftyBayState extends State<CraftyBay> {
       init: CraftyBay.languageController,
       builder: (languageController) {
         return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
           navigatorKey: CraftyBay.navigatorKey,
           localizationsDelegates: [
             AppLocalizations.delegate,
