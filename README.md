@@ -15,8 +15,22 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
       <em>Sign Up Screen</em>
     </td>
     <td>
-      <img src="screenshots/S3.png" width="220" alt="Email Verification"/><br/>
-      <em>Email Verification</em>
+      <img src="screenshots/S3.png" width="220" alt="OTP Verification"/><br/>
+      <em>OTP Verification</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/S4.png" width="220" alt="Splash Screen"/><br/>
+      <em>Splash Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S5.png" width="220" alt="Home Screen"/><br/>
+      <em>Home Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S6.png" width="220" alt="Category Screen"/><br/>
+      <em>Category Screen</em>
     </td>
   </tr>
   </table>
