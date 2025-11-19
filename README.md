@@ -11,11 +11,11 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
       <em>Login Screen</em>
     </td>
     <td>
-      <img src="screenshots/S2.png" width="200" alt="Sign Up Screen"/><br/>
+      <img src="screenshots/S2.png" width="220" alt="Sign Up Screen"/><br/>
       <em>Sign Up Screen</em>
     </td>
     <td>
-      <img src="screenshots/S3.png" width="200" alt="Email Verification"/><br/>
+      <img src="screenshots/S3.png" width="220" alt="Email Verification"/><br/>
       <em>Email Verification</em>
     </td>
   </tr>
