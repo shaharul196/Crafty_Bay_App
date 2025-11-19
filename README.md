@@ -47,6 +47,20 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
       <em>Cart Screen</em>
     </td>
   </tr>
+  <tr>
+    <td>
+      <img src="screenshots/S11.png" width="220" alt="Payment Gateway Screen"/><br/>
+      <em>Payment Gateway Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S13.png" width="220" alt="Add Review Screen"/><br/>
+      <em>Add Review Screen</em>
+    </td>
+    <td>
+      <img src="screenshots/S12.png" width="220" alt="Review Screen"/><br/>
+      <em>Review Screen</em>
+    </td>
+  </tr>
   </table>
 
   ## ✨ Features
