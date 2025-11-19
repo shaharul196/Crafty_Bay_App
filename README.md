@@ -28,7 +28,7 @@ A full-featured E-commerce application built with Flutter, featuring user Authen
 - **OTP Verification** - 4-digit PIN verification system
 
 
-### Crafty Bay E-commerce App
+## Crafty Bay E-commerce App
 - **Add To Cart** - Add new tasks with titles and descriptions
 - **Delete Item Cart** - Organized task dashboard with categorized views
 - **Cart Item Incre** - Organized task dashboard with categorized views
